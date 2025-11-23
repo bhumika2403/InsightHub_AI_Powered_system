@@ -1,0 +1,18 @@
+{
+  "tasks": [],
+  "stats": {
+    "summaries": 0,
+    "tasks": 0,
+    "ideas": 0,
+    "sentiments": 1,
+    "chats": 0
+  },
+  "users": [
+    {
+      "id": 1763915347969,
+      "email": "bhumikasami@gmail.com",
+      "password": "1234",
+      "createdAt": "2025-11-23T16:29:07.969Z"
+    }
+  ]
+}
