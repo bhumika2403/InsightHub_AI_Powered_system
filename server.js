@@ -5,14 +5,16 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Data file path
+// FIXED: Serve static files from the SAME directory as server.js
+app.use(express.static(__dirname));
+
+// Data file path - SAME directory
 const DATA_FILE = path.join(__dirname, 'data.json');
 
 // Initialize data file if it doesn't exist
@@ -131,7 +133,6 @@ app.post('/api/stats', (req, res) => {
 app.post('/api/ai/summarize', (req, res) => {
   const { text } = req.body;
   
-  // Simple mock summarization
   const sentences = text.replace(/\n/g,' ').split(/[.?!]\s+/).filter(Boolean);
   const summary = sentences.length ? sentences.slice(0, 3) : ['No text provided.'];
   
@@ -202,7 +203,6 @@ app.post('/api/auth/register', (req, res) => {
   
   const data = readData();
   
-  // Check if user exists
   const userExists = data.users.find(u => u.email === email);
   if (userExists) {
     return res.status(400).json({ success: false, message: 'User already exists' });
@@ -211,7 +211,7 @@ app.post('/api/auth/register', (req, res) => {
   const newUser = {
     id: Date.now(),
     email,
-    password, // In production, hash this!
+    password,
     createdAt: new Date().toISOString()
   };
   
@@ -241,9 +241,9 @@ app.post('/api/auth/login', (req, res) => {
   });
 });
 
-// Serve frontend
+// FIXED: Serve index.html from SAME directory
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start server
