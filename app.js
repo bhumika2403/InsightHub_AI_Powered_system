@@ -4,7 +4,7 @@ const el = id => document.getElementById(id);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // Backend API URL
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://insighthub-ai-powered-system-2.onrender.com/api';
 
 /* ---------- State ---------- */
 const STATE = {
@@ -442,4 +442,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ---------- Initial render ---------- */
+
 updateStatsUI(); updateChart(); renderTaskList();
