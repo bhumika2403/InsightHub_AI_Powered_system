@@ -11,4 +11,4 @@ The project is organized into two main directories: the frontend folder contains
 Users can leverage multiple productivity features through an intuitive interface. The Smart Summary tool allows you to paste long articles or meeting notes and instantly receive a condensed 3-point summary. The Sentiment Analyzer evaluates the emotional tone of any text and displays results with emoji indicators and a positivity gauge. The Task Extractor scans your text for actionable items and automatically creates a task list, while the Idea Generator helps brainstorm creative solutions for any topic you provide. All statistics are tracked in real-time and displayed on an interactive analytics dashboard with visual charts.
 ## Author
 Created by Your Bhumika. Feel free to reach out via email at bhumikasami@gmail.com .
-This is the deyloped link :- https://bhumika2403.github.io/InsightHub_AI_Powered_system/
+## Deyloped link :- https://insighthub-ai-powered-system-2.onrender.com/
