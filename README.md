@@ -1,7 +1,7 @@
 ## InsightHub - AI Powered Dashboard
 InsightHub is a full-stack AI-powered productivity dashboard that helps users boost their workflow with intelligent automation. Built with modern web technologies, it features a beautiful glassmorphism design with dark/light theme support and customizable accent colors.
 The application includes several AI-powered tools to enhance productivity. The Smart Summarization feature converts long text into concise 3-point summaries, while the Sentiment Analysis tool analyzes text mood with visual emoji indicators and progress bars. The Task Extractor automatically detects and extracts actionable items from meeting notes or emails, and the Idea Generator provides AI-powered brainstorming suggestions for any topic. Users can also interact with a Chat Assistant for productivity tips and manage their tasks with real-time analytics tracking
- ##Tech Stack
+## Tech Stack
 The frontend is built with HTML5, CSS3, and vanilla JavaScript, utilizing Chart.js for data visualization and implementing a responsive glassmorphism design. The backend runs on Node.js with Express.js, featuring a RESTful API architecture with CRUD operations and JSON-based data persistence for storing tasks and user statistics
 ## Getting Started
 To run this project locally, first clone the repository and navigate to the backend folder. Install the dependencies using `npm install` and start the server with `npm start`. The server will run on `http://localhost:3000` and serve both the API endpoints and the frontend. Open your browser and visit `http://localhost:3000` to access the dashboard. You can then try out the various AI features by pasting text for summarization, analyzing sentiment, extracting tasks from notes, or generating ideas for any topic.
